@@ -1,4 +1,4 @@
-package com.af1987.codepath.instagramclone;
+package com.af1987.codepath.instagramclone.ui.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,8 +9,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.parse.LogInCallback;
-import com.parse.ParseException;
+import com.af1987.codepath.instagramclone.R;
 import com.parse.ParseUser;
 
 public class LoginActivity extends AppCompatActivity {
@@ -42,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     private void login(String username, String pw) {
         ParseUser.logInInBackground(username, pw, (user, e) -> {
             if (e != null) {
-                Log.e("_AF", "login failed: " + e.getMessage(), e);
+                Log.e("_AF", "login failed: " + e.getMessage());
             }
             else {
                 PreferenceManager.getDefaultSharedPreferences(this).edit()
