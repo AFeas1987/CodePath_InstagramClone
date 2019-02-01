@@ -24,7 +24,7 @@ public class DetailFragment extends DialogFragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         setShowsDialog(true);
-        return inflater.inflate(R.layout.fragment_detail, container, false);
+        return inflater.inflate(R.layout.rv_item_post, container, false);
     }
 
 
